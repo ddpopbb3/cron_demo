@@ -1,7 +1,7 @@
 import { DOMParser } from "https://deno.land/x/deno_dom/deno-dom-wasm.ts";
 import showdown from "https://esm.sh/showdown@1.9.1";
 
-Deno.cron("sample cron", "30 7 * * *", () => {
+Deno.cron("sample cron", "30 3 * * *", () => {
   try {
     const result = main(); // 获取 main 函数的结果
     return new Response(JSON.stringify(result), { status: 200 }); // 返回成功响应
@@ -14,8 +14,8 @@ Deno.cron("sample cron", "30 7 * * *", () => {
 
 class Config {
   static APP_TOKEN = "AT_ARG2LV1hvLXQhqrp8QMcIRFK8ek1kxTf"; // 替换为您的实际应用令牌
-  static TOPIC_IDS = []; // 替换为您的实际主题 ID
-  static UIDS = ["UID_xozJUs6EZrUzNFqU8m9DdjXhqInf"]; // UID_xozJUs6EZrUzNFqU8m9DdjXhqInf
+  static TOPIC_IDS = [34192]; // 替换为您的实际主题 ID
+  static UIDS = []; // UID_xozJUs6EZrUzNFqU8m9DdjXhqInf
   static CONTENT_TYPE = 3;
   static VERIFY_PAY_TYPE = 0;
 }
