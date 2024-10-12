@@ -1,7 +1,7 @@
 import { DOMParser } from "https://deno.land/x/deno_dom/deno-dom-wasm.ts";
 import showdown from "https://esm.sh/showdown@1.9.1";
 
-Deno.cron("sample cron", "30 10 * * *", () => {
+Deno.cron("sample cron", "30 7 * * *", () => {
   try {
     const result = main(); // 获取 main 函数的结果
     return new Response(JSON.stringify(result), { status: 200 }); // 返回成功响应
